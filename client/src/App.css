@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.whatsapp-container {
+  width: 100vw;
+  max-width: none;
+  height: 100vh;
+  background: #0b141a; 
+  border-radius: 0;
+  box-shadow: none;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #25d366;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: #667781;
+}
+
+/* Empty State */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: #667781;
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 48px;
+  color: #b3b3b3;
+  margin-bottom: 16px;
+}
+
+.empty-state h2 {
+  margin-bottom: 8px;
+  color: #111b21;
+}
+
+.empty-state p {
+  color: #667781;
+  margin-bottom: 4px;
+}
+
+.empty-state small {
+  color: #8696a0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app {
+    height: 100vh;
+    padding: 0;
+  }
+  
+  .whatsapp-container {
+    height: 100vh;
+    border-radius: 0;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .whatsapp-container {
+    flex-direction: column;
+  }
+} 
